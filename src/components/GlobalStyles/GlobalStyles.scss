@@ -4,9 +4,10 @@
 :root {
     --primary:#fe2c55;
     --black:#000;
+    --white:#fff;
     --text-color:#333;
     --height-search:46px;
-    --search-top-spacer:9px;
+
     //default layout
     --default-layout-header-height:60px;
     --default-layout-width-content:1150px;
@@ -39,3 +40,7 @@ a[href] {
     color:var(--text-color);
     text-decoration:none;
 }
+// .primary {
+//     background-color:red;
+//     color: #fff;
+// }

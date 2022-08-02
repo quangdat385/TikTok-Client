@@ -100,8 +100,14 @@ input:not(:placeholder-shown)~.search-btn{
         background-color:rgba(22, 24, 35, 0.06)
     }
 }
-
 .actions {
-    
-    
+    display: flex;
 }
+
+.more-btn{
+    font-size:2rem;
+    margin-left:28px;
+    background-color:transparent;
+    padding:4px 8px;
+}
+
