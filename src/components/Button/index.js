@@ -17,10 +17,11 @@ function Button({to,href,onClick,children,
                 ...passProps}) {
     let Component='button';
     const props={
-        onClick
+        onClick,
+        ...passProps,
     };
     if (to) {
-        props.to=to;
+        props.to=to
         Component=Link;
     }else if (href) {
         props.href=href;
@@ -33,7 +34,7 @@ function Button({to,href,onClick,children,
             }
         })
     }
-
+    
     const classes=cx('wrapper',{
         primary,
         outline,
@@ -44,9 +45,9 @@ function Button({to,href,onClick,children,
         rounded,
         [className]:className
     })
-
+    
     return (  
-        <Component className={classes} >
+        <Component className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
             <span className={cx('title')}>{children}</span>
             {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}

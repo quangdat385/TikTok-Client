@@ -10,7 +10,7 @@
 }
 
 .inner {
-    
+    padding: 0 var(--default-layout-horizontal-spacer);
     justify-content: space-between;
     height: 100%;
     width: var(--default-layout-width-content);
@@ -102,9 +102,29 @@ input:not(:placeholder-shown)~.search-btn{
 }
 .actions {
     display: flex;
+    align-items: center;
 }
 
+
+.user-avatar {
+    height: 32px;
+    width: 32px;
+    object-fit: cover;
+    border-radius:50%;
+    margin-left:14px;
+}
+
+.action-btn {
+    font-size:2.2rem;
+    display:flex;
+    color: #161823;
+    background-color:transparent;
+    padding:4px 12px;
+    cursor: pointer;
+
+}
 .more-btn{
+    cursor: pointer;
     font-size:2rem;
     margin-left:28px;
     background-color:transparent;
