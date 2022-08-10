@@ -1,25 +1,25 @@
 //menu items
 
 .menu-list {
-    width:224px;
-    
-    
+    width: 224px;
 
-    .menu-item{
-        
-        margin-left:0;
-        
-        
+
+
+    .menu-item {
+
+        margin-left: 0;
+
+
     }
 }
 
 
 //menuitem
 .menu-item {
-    width:100%;
-    justify-content:flex-start;
-    border-radius:0;
-    padding:12px 16px;
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 0;
+    padding: 12px 16px;
     font-weight: 600;
 
 
@@ -28,33 +28,39 @@
     }
 
     &:hover {
-        background-color:rgba(22, 24, 35, 0.03)
+        background-color: rgba(22, 24, 35, 0.03)
     }
 }
 
 .menu-popper {
-    padding:8px 0;
+    padding: 8px 0;
+}
+
+.menu-body {
+    overflow-y: auto;
 }
 
 //Header 
 .header {
-    margin-top:-8px;
+    margin-top: -8px;
     position: relative;
     height: 50px;
 }
+
 .back-btn {
     width: 50px;
     height: 100%;
-    background-color:transparent;
-    cursor:pointer;
-    
+    background-color: transparent;
+    cursor: pointer;
+
 }
-.header-title{
-    
-    font-size:1.8rem;
+
+.header-title {
+
+    font-size: 1.8rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% ,-50%);
-    
+    transform: translate(-50%, -50%);
+
 }
