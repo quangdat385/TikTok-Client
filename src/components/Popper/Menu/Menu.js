@@ -13,10 +13,10 @@ const cx = className.bind(styles)
 const defaultFn = () => { }
 
 
-function Menu({ children, items = [] }, hideOnClick = false, onChange = { defaultFn }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
 
     const [history, setHistory] = useState([{ data: items }]);
-    console.log(history);
+
     const current = history[history.length - 1]
     console.log(current)
 
@@ -35,7 +35,7 @@ function Menu({ children, items = [] }, hideOnClick = false, onChange = { defaul
                         if (isParent) {
                             setHistory((pre) => [...pre, item.children])
                         } else {
-                            onChange()
+                            onChange(item)
                         }
                     }}
 
@@ -47,7 +47,7 @@ function Menu({ children, items = [] }, hideOnClick = false, onChange = { defaul
     const renderResult = (attrs) => (
         <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
             <PopperWrapper className={cx('menu-popper')}>
-                {history.length > 1 && <Header title={current.title} onBack={handleBack} />}
+                {history.length > 1 && <Header title={current.type} onBack={handleBack} />}
                 <div className={cx('menu-body')}>{renderItems()}</div>
             </PopperWrapper>
         </div>
