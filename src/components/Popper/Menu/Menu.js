@@ -16,7 +16,7 @@ const defaultFn = () => { }
 function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
 
     const [history, setHistory] = useState([{ data: items }]);
-    console.log(history);
+
     const current = history[history.length - 1]
     console.log(current)
 
@@ -35,7 +35,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                         if (isParent) {
                             setHistory((pre) => [...pre, item.children])
                         } else {
-                            onChange()
+                            onChange(item)
                         }
                     }}
 
