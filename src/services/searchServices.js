@@ -13,3 +13,11 @@ export const search = async (q, type = 'less') => {
         console.log(error);
     }
 };
+export const show = async () => {
+    try {
+        const res = await httpRequest.get('users/show');
+        return res.data;
+    } catch (error) {
+        console.log(error);
+    }
+};
